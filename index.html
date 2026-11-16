@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Southwest Kampı 2026 Rehberi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<style>
+/* Layout: sticky chip nav on top, single reading column, cards only for texts and tables. */
+:root{
+  --bg:#f3f6f5; --surface:#ffffff; --fg:#13231f; --muted:#52645f; --line:#d5dfdc;
+  --accent:#1c6b5b; --accent-ink:#ffffff; --gold:#a8741a; --soft:#e4efec;
+  --f-display:"Source Serif 4",Georgia,serif; --f-body:Inter,system-ui,sans-serif; --f-ar:Amiri,"Traditional Arabic",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1b18;--surface:#16262a;--fg:#e6efec;--muted:#9bb0aa;--line:#2a3f3a;--accent:#5fc4ae;--accent-ink:#0f1b18;--gold:#e0b25a;--soft:#1b302b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1b18;--surface:#16262a;--fg:#e6efec;--muted:#9bb0aa;--line:#2a3f3a;--accent:#5fc4ae;--accent-ink:#0f1b18;--gold:#e0b25a;--soft:#1b302b;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.6 var(--f-body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+*{box-sizing:border-box}
+.wrap{max-width:860px;margin:0 auto}
+header.top{padding:36px 0 20px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font:700 clamp(30px,6vw,46px)/1.1 var(--f-display);margin:8px 0 10px;text-wrap:balance}
+.lead{color:var(--muted);max-width:60ch;margin:0}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.facts span{background:var(--soft);padding:5px 12px;border-radius:999px;font-size:13px}
+nav.chips{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);margin:0 calc(-1*max(16px,env(safe-area-inset-left,0px)));padding:8px max(16px,env(safe-area-inset-left,0px));overflow-x:auto;white-space:nowrap}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+nav.chips a{display:inline-block;padding:6px 12px;margin-right:4px;border-radius:8px;color:var(--fg);text-decoration:none;font-size:13.5px;font-weight:500}
+nav.chips a:hover,nav.chips a:focus-visible{background:var(--soft);outline:2px solid var(--accent)}
+section{padding-top:36px;scroll-margin-top:56px}
+h2{font:700 26px/1.2 var(--f-display);margin:0 0 6px;text-wrap:balance}
+h3{font:600 17px/1.3 var(--f-body);margin:22px 0 6px}
+p{margin:8px 0;max-width:68ch}
+.sub{color:var(--muted);margin-bottom:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td.t{white-space:nowrap;color:var(--muted)}
+tr.pray td{background:var(--soft);font-weight:500}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tabs button{font:500 14px var(--f-body);padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;min-width:0}
+.card h4{margin:0 0 8px;font:600 15px var(--f-body)}
+.ar{font:400 26px/2 var(--f-ar);direction:rtl;text-align:right;margin:4px 0}
+.ok{color:var(--muted);font-style:italic}
+.src{font-size:12.5px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.grid>*{min-width:0}
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;align-items:end}
+.calc label{display:flex;flex-direction:column;font-size:12.5px;color:var(--muted);gap:4px}
+.calc input{font:500 16px var(--f-body);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);width:100%}
+.result{font:700 32px var(--f-display);color:var(--accent)}
+.links{display:grid;gap:10px}
+.links a{display:block;padding:12px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--fg);text-decoration:none}
+.links a:hover{border-color:var(--accent)}
+.links a b{display:block;color:var(--accent)}
+.links a span{font-size:13px;color:var(--muted)}
+.warn{border-left:4px solid var(--gold);padding:8px 14px;background:var(--soft);border-radius:0 8px 8px 0}
+ul{padding-left:20px;margin:6px 0}
+li{margin:3px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+</style>
+
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top" id="top">
+  <div class="eyebrow">Raindrop Education · 12. sınıf rehberlik</div>
+  <h1>Southwest Kampı 2026</h1>
+  <p class="lead">Kamp programı, namaz vakitleri, toplu hatim, ezber planı, Risale müzakeresi ve dua saati tek yerde.</p>
+  <div class="facts"><span>21–26 Kasım 2026</span><span>Dallas, Teksas</span><span>12. sınıf erkek öğrenciler</span></div>
+</header>
+
+<nav class="chips" aria-label="Bölümler">
+  <a href="#amac">Amaç</a><a href="#vakitler">Vakitler</a><a href="#program">Program</a><a href="#hatim">Hatim</a><a href="#ezber">Namaz dersi</a><a href="#risale">Risale</a><a href="#dua">Dua saati</a>
+</nav>
+
+<section id="amac">
+  <h2>Kampın amacı</h2>
+  <p class="sub">Üç ana tema, her gün seminerlerde ve müzakerede işlenir.</p>
+  <div class="grid">
+    <div class="card"><h4>Hizmet ve hicret</h4>Hicretin manası, sahabenin hicreti, gurbette hizmet şuuru.</div>
+    <div class="card"><h4>Temsil</h4>Temsilde ahlak ve örnek davranış. Sadakat ve vefa.</div>
+    <div class="card"><h4>Hizmet insanının vasıfları</h4>Kamp sonunda herkes kendi hizmet planını çıkarır.</div>
+  </div>
+</section>
+
+<section id="vakitler">
+  <h2>Dallas namaz vakitleri</h2>
+  <p class="sub">ISNA hesabı. Kamp günleri 21–26 Kasım.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Tarih</th><th>Sabah</th><th>Güneş</th><th>Öğle</th><th>İkindi</th><th>Akşam</th><th>Yatsı</th></tr></thead>
+    <tbody>
+    <tr><td>21 Kas Cmt</td><td>05:52</td><td>07:03</td><td>12:14</td><td>15:03</td><td>17:23</td><td>18:34</td></tr>
+    <tr><td>22 Kas Paz</td><td>05:52</td><td>07:04</td><td>12:14</td><td>15:03</td><td>17:23</td><td>18:34</td></tr>
+    <tr><td>23 Kas Pzt</td><td>05:53</td><td>07:05</td><td>12:15</td><td>15:02</td><td>17:22</td><td>18:34</td></tr>
+    <tr><td>24 Kas Sal</td><td>05:54</td><td>07:06</td><td>12:15</td><td>15:02</td><td>17:22</td><td>18:34</td></tr>
+    <tr><td>25 Kas Çar</td><td>05:55</td><td>07:06</td><td>12:15</td><td>15:02</td><td>17:22</td><td>18:34</td></tr>
+    <tr><td>26 Kas Per</td><td>05:56</td><td>07:07</td><td>12:16</td><td>15:02</td><td>17:22</td><td>18:33</td></tr>
+    </tbody></table></div>
+</section>
+
+<section id="program">
+  <h2>Günlük program</h2>
+  <p class="sub">22–25 Kasım tam günlerdir ve saatleri aynıdır. Gün seç.</p>
+  <div class="tabs" role="tablist" id="daytabs"></div>
+  <div id="daybody"></div>
+</section>
+
+<section id="hatim">
+  <h2>Toplu hatim sistemi</h2>
+  <p class="sub">Kur'an saatinde (12:00–12:30) her öğrenci günlük payını okur. Mushaf 604 sayfa kabul edilir. Sayfa aralıkları sırayla dağıtılır ve 604'ten sonra başa döner.</p>
+  <div class="card">
+    <div class="calc">
+      <label>Öğrenci sayısı<input id="c-n" type="number" min="1" value="20" inputmode="numeric"></label>
+      <label>Günlük sayfa (kişi başı)<input id="c-p" type="number" min="1" value="16" inputmode="numeric"></label>
+      <label>Okuma günü<input id="c-d" type="number" min="1" max="6" value="4" inputmode="numeric"></label>
+      <div><div class="src">Toplam hatim</div><div class="result" id="c-r">2,12</div></div>
+    </div>
+    <p class="src" id="c-note">20 öğrenci × 16 sayfa × 4 gün = 1280 sayfa.</p>
+  </div>
+  <ul>
+    <li>Öğrenci sayısı (20) ve 30 dakikada okunan sayfa (8) varsayımdır. Gerçek sayıyla güncellenir.</li>
+    <li>Takip tablosu Excel dosyasındadır: Ayarlar, Öğrenciler, Plan, Takip ve Özet sayfaları. Okunan sayfa girilince hatim ilerlemesi otomatik hesaplanır.</li>
+    <li>Hedef: kamp boyunca en az 2 hatim.</li>
+  </ul>
+  <p class="src">Dosya: Southwest_Kampi_2026_Hatim_Takip.xlsx (ayrıca gönderildi).</p>
+</section>
+
+<section id="ezber">
+  <h2>Namaz dersi</h2>
+  <p class="sub">Her öğle namazından sonra 13:00–13:10 arası 1 ayet ve 1 hadis üzerinden geçilir. Konu irşad, tebliğ ve ilim öğrenmedir. Kamp sonunda isteyen öğrenci hepsini okuyabilir.</p>
+  <div id="ezlist"></div>
+</section>
+
+<section id="risale">
+  <h2>Risale müzakeresi</h2>
+  <p class="sub">Her gün 16:30–17:20. Akış: 5 dk giriş, 20 dk okuma, 20 dk grup müzakeresi, 5 dk kapanış. Kaynaklar: Fikir Atlası ve Fütüvvetin Nurlu Yolundan Yazılar.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Gün</th><th>Konu</th><th>Bölüm ve sayfa</th></tr></thead>
+    <tbody>
+    <tr><td>22 Kas</td><td>Hicret</td><td>PDF bekleniyor</td></tr>
+    <tr><td>23 Kas</td><td>Namaz</td><td>PDF bekleniyor</td></tr>
+    <tr><td>24 Kas</td><td>Sadakat ve vefa</td><td>PDF bekleniyor</td></tr>
+    <tr><td>25 Kas</td><td>Birleşim: hicret, namaz, sadakat</td><td>PDF bekleniyor</td></tr>
+    </tbody></table></div>
+  <p>Kitapların PDF'leri gelince her konuya bölüm ve sayfa aralığı yazılacak. Ayrıntılı sorular ve akış belgede.</p>
+</section>
+
+<section id="dua">
+  <h2>Dua saati</h2>
+  <p class="sub">Her akşam namazından sonra 17:20–18:00 arası. Cevşen ve Tevhidname birlikte okunur.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Gün</th><th>Cevşen bölümleri</th></tr></thead>
+    <tbody>
+    <tr><td>22 Kas</td><td>1–25</td></tr>
+    <tr><td>23 Kas</td><td>26–50</td></tr>
+    <tr><td>24 Kas</td><td>51–75</td></tr>
+    <tr><td>25 Kas</td><td>76–100 ve Cevşen duası</td></tr>
+    </tbody></table></div>
+  <h3>Cevşen</h3>
+  <div class="card" id="cevsen"><p class="ok">Cevşen metni (Arapça ve okunuş) buraya eklenecek.</p></div>
+  <h3>Tevhidname</h3>
+  <div class="card" id="tevhid"><p class="ok">Tevhidname metni buraya eklenecek.</p></div>
+</section>
+
+<footer><a href="#top">Başa dön</a> · Raindrop Education · Southwest Kampı 2026</footer>
+</div>
+
+<script>
+var V={ "21":["05:52","12:14","15:03","17:23","18:34"],"22":["05:52","12:14","15:03","17:23","18:34"],"23":["05:53","12:15","15:02","17:22","18:34"],"24":["05:54","12:15","15:02","17:22","18:34"],"25":["05:55","12:15","15:02","17:22","18:34"],"26":["05:56","12:16","15:02","17:22","18:33"]};
+var DAYS=[
+ {k:"21",l:"21 Kas Cmt",lead:"Varış ve açılış günü.",rows:[["17:00","Check-in ve yerleşme"],["17:20","Akşam namazı (ezan 17:23)",1],["17:45","Akşam yemeği"],["18:45","Yatsı namazı (ezan 18:34)",1],["19:15","Açılış ve tanışma"],["20:15–22:45","Aktivite"],["23:00","Yatış"]]},
+ {k:"22",l:"22 Kas Paz",s1:"Hicretin manası, sahabenin hicreti ve hizmet",s2:"Gurbette hizmet şuuru",act:"Spor turnuvası (kapalı salon)",nd:"Fussilet 41/33 ve Belliğû annî ve lev âye",ris:"Hicret"},
+ {k:"23",l:"23 Kas Pzt",s1:"Hizmet ve temsil",s2:"Temsilde ahlak ve örnek davranış",act:"Kapalı alan (bowling, trampolin)",nd:"Nahl 16/125 ve Men dalle alâ hayrin",ris:"Namaz"},
+ {k:"24",l:"24 Kas Sal",s1:"Hizmet insanının vasıfları",s2:"Çevrim içi konuk sohbeti (Avustralya)",act:"Gece oyunu ve ateş başı",nd:"Tâhâ 20/114 ve Men seleke tarîkan",ris:"Sadakat ve vefa"},
+ {k:"25",l:"25 Kas Çar",s1:"Hicret, temsil ve vasıfların birleşimi, benim hizmetim",s2:"Hizmet yolunda biz",act:"Kamp bilgi yarışması ve grup sunumları",nd:"Mücâdele 58/11 ve Hayrukum men teallemel Kur'ân",ris:"Birleşim"},
+ {k:"26",l:"26 Kas Per",lead:"Dağılış günü.",rows:[["04:50","Uyanış, abdest"],["05:10","Teheccüd namazı, dua ve zikir"],["05:50","Sabah namazı (ezan 05:56)",1],["08:30–09:15","Kahvaltı"],["09:30","Dağılış"]]}
+];
+function full(d){var v=V[d.k];return [
+ ["05:10–05:25","Uyanış, abdest"],["05:25–05:50","Teheccüd namazı, dua ve zikir"],["05:50–06:15","Sabah namazı (ezan "+v[0]+") ve sabah duası",1],["06:15–08:30","Dinlenme (uyku)"],["08:30–09:15","Kahvaltı"],["09:15–09:30","Duha namazı",1],["09:30–10:30","Okuma saati 1 (kamp kitabı)"],["10:30–10:45","Meyve saati"],["10:45–11:35","Seminer 1"],["11:35–12:00","Kahve ve snacks"],["12:00–12:30","Kur'an saati (toplu hatim takibi)"],["12:30–13:00","Öğle namazı (ezan "+v[1]+") ve tesbihat",1],["13:00–13:10","Namaz dersi: "+d.nd],["13:10–14:00","Öğle yemeği"],["14:00–14:45","Kitap okuma 2"],["14:45–15:10","Abdest ve hazırlık"],["15:10–15:40","İkindi namazı (ezan "+v[2]+") ve tesbihat",1],["15:40–16:00","Multimedya"],["16:00–16:30","Tatlı (baklava) ikramı"],["16:30–17:20","Risale müzakeresi: "+d.ris],["17:20–18:00","Akşam namazı (ezan "+v[3]+") ve dua saati",1],["18:00–18:45","Seminer 2"],["18:45–19:30","Akşam yemeği"],["19:30–20:00","Yatsı namazı (ezan "+v[4]+")",1],["20:00–20:30","Değerlendirme"+(d.k=="25"?" (kamp değerlendirmesi, bavulların hazırlanması)":"")],["20:30–22:45","Aktivite"],["23:00","Yatış"]];}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function showDay(k){
+  var d=DAYS.filter(function(x){return x.k===k})[0],rows=d.rows||full(d);
+  var h=(d.lead?'<p>'+esc(d.lead)+'</p>':'')+'<div class="tablewrap"><table><tbody>';
+  rows.forEach(function(r){h+='<tr'+(r[2]?' class="pray"':'')+'><td class="t">'+esc(r[0])+'</td><td>'+esc(r[1])+'</td></tr>'});
+  document.getElementById("daybody").innerHTML=h+'</tbody></table></div>';
+  [].forEach.call(document.querySelectorAll("#daytabs button"),function(b){b.setAttribute("aria-selected",b.dataset.k===k)});
+}
+var tb=document.getElementById("daytabs");
+DAYS.forEach(function(d){var b=document.createElement("button");b.textContent=d.l;b.dataset.k=d.k;b.setAttribute("role","tab");b.onclick=function(){showDay(d.k)};tb.appendChild(b)});
+showDay("22");
+
+var EZ=[
+ {g:"22 Kas · İrşad ve tebliğ",a:"وَمَنْ أَحْسَنُ قَوْلًا مِّمَّن دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ",t:"Allah'a çağıran, salih amel işleyen ve “Ben müslümanlardan biriyim” diyen kimseden daha güzel sözlü kim olabilir?",s:"Fussilet 41/33",
+  ha:"بَلِّغُوا عَنِّي وَلَوْ آيَةً",ht:"Benden bir ayet bile olsa tebliğ edin.",hs:"Buhârî, Enbiyâ 50"},
+ {g:"23 Kas · İrşad ve tebliğ",a:"ادْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ وَجَادِلْهُم بِالَّتِي هِيَ أَحْسَنُ",t:"Rabbinin yoluna hikmetle ve güzel öğütle çağır, onlarla en güzel şekilde mücadele et.",s:"Nahl 16/125",
+  ha:"مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",ht:"Kim bir hayra vesile olursa, onu yapanın sevabı gibi sevap alır.",hs:"Müslim, İmâre 133"},
+ {g:"24 Kas · İlim öğrenme",a:"وَقُل رَّبِّ زِدْنِي عِلْمًا",t:"De ki: Rabbim, ilmimi artır.",s:"Tâhâ 20/114",
+  ha:"مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ",ht:"Kim ilim öğrenmek için bir yola girerse, Allah ona cennete giden yolu kolaylaştırır.",hs:"Müslim, Zikr 38"},
+ {g:"25 Kas · İlim öğrenme",a:"يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",t:"Allah, içinizden iman edenlerin ve kendilerine ilim verilenlerin derecelerini yükseltir.",s:"Mücâdele 58/11",
+  ha:"خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",ht:"Sizin en hayırlınız, Kur'an'ı öğrenen ve öğretendir.",hs:"Buhârî, Fezâilü'l-Kur'ân 21"}
+];
+var L=document.getElementById("ezlist");
+EZ.forEach(function(e){
+ L.innerHTML+='<div class="card"><h4>'+e.g+'</h4><div class="ar" lang="ar">'+e.a+'</div><p>'+e.t+'</p><p class="src">Ayet: '+e.s+'</p><div class="ar" lang="ar">'+e.ha+'</div><p>'+e.ht+'</p><p class="src">Hadis: '+e.hs+'</p></div>';
+});
+
+function calc(){
+ var n=+document.getElementById("c-n").value||0,p=+document.getElementById("c-p").value||0,d=+document.getElementById("c-d").value||0,t=n*p*d;
+ document.getElementById("c-r").textContent=(t/604).toFixed(2).replace(".",",");
+ document.getElementById("c-note").textContent=n+" öğrenci × "+p+" sayfa × "+d+" gün = "+t+" sayfa. Bir hatim 604 sayfa.";
+}
+["c-n","c-p","c-d"].forEach(function(i){document.getElementById(i).addEventListener("input",calc)});
+</script>
+</body>
+</html>
